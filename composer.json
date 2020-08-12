@@ -1,0 +1,69 @@
+{
+  "name": "markenzoo/contao-extended-faq-bundle",
+  "type": "contao-bundle",
+  "description": "This extension provides an additional Front-End Module to show only selected questions from a FAQ category together with a link to the complete FAQ Page inside Contao CMS.",
+  "keywords":["contao","bundle","FAQ"],
+  "homepage": "https://github.com/markenzoo/contao-extended-faq-bundle",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "markenzoo",
+      "homepage": "https://www.markenzoo.de",
+      "email" : "kaestner@markenzoo.de",
+      "role" : "Developer"
+    },
+    {
+      "name": "Felix Kästner",
+      "homepage": "https://felix-kaestner.com",
+      "email" : "hello@felix-kaestner.com",
+      "role" : "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "contao/core-bundle": "^4.9",
+    "contao/faq-bundle": "^4.9",
+    "symfony/framework-bundle": "^4.4"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0",
+    "friendsofphp/php-cs-fixer": "^2.0",
+    "phpunit/phpunit": "^8.5",
+    "symfony/phpunit-bridge": "^4.4",
+    "psalm/plugin-phpunit": "^0.10",
+    "psalm/plugin-symfony": "^1.0",
+    "vimeo/psalm": "^3.9"
+  },
+  "extra": {
+    "contao-manager-plugin": "Markenzoo\\ContaoExtendedFaqBundle\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Markenzoo\\ContaoExtendedFaqBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Markenzoo\\ContaoExtendedFaqBundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "fix": "php-cs-fixer fix -v",
+    "lint": "psalm",
+    "lint:fix": "psalter --issues=all --dry-run"
+  },
+  "support": {
+    "email" : "kaestner@markenzoo.de",
+    "issues": "https://github.com/markenzoo/contao-extended-faq-bundle/issues",
+    "source": "https://github.com/markenzoo/contao-extended-faq-bundle"
+  },
+  "suggest": {
+    "markenzoo/contao-file-helper-bundle": "Markenzoo File Helper extends the file manager to show where files are included and to edit these elements with one click. / Die Markenzoo File Helper Erweiterung erlaubt es in der Dateiverwaltung anzeigen zu lassen, wo Dateien eingebunden sind und diese Elemente mit einem Klick zu bearbeiten.",
+    "markenzoo/contao-expo-push-notification-bundle": "Markenzoo Expo Push Notification Bundle gives you the possibility to send custom push notifications for Expo (React Native) in Contao 4. / Die Markenzoo Erweiterung für Expo Push-Benachrichtigungen erlaubt es eigene Push-Benachrichtigungen für Expo (React Native) in Contao 4 zu versenden."
+  }
+}

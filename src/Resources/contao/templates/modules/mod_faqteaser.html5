@@ -1,0 +1,6 @@
+<?php $this->extend('mod_faqlist'); ?>
+
+<?php $this->block('content'); ?>
+    <?php $this->parent(); ?>
+    <a href="<?= $this->href ?>" class="hyperlink_txt" title="<?= $this->linkTitle ?>"><?= $this->link ?></a>
+<?php $this->endblock(); ?>
