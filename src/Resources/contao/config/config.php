@@ -14,6 +14,8 @@ declare(strict_types=1);
  */
 
 use Markenzoo\ContaoExtendedFaqBundle\ModuleFaqTeaser;
+use Markenzoo\ContaoExtendedFaqBundle\ModuleFaqSelection;
 
 // Front end modules
 $GLOBALS['FE_MOD']['faq']['faqteaser'] = ModuleFaqTeaser::class;
+$GLOBALS['FE_MOD']['faq']['faqselection'] = ModuleFaqSelection::class;

@@ -14,3 +14,4 @@ declare(strict_types=1);
  */
 
 $GLOBALS['TL_LANG']['FMD']['faqteaser'] = ['FAQ-Teaser', 'Fügt der Seite eine Liste ausgewählter häufig gestellter Fragen mit Verlinkung zur FAQ-Seite hinzu.'];
+$GLOBALS['TL_LANG']['FMD']['faqselection'] = ['FAQ-Auswahl', 'Gibt einen Teil der FAQ-Liste und den FAQ-Leser auf derselben Seite mit Verlinkung zur kompletten FAQ-Seite aus.'];

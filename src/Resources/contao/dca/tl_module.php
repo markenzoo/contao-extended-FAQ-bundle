@@ -13,9 +13,12 @@ declare(strict_types=1);
  * @license   https://github.com/markenzoo/contao-extended-faq-bundle/blob/master/LICENSE LGPL-3.0-or-later
  */
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['faqteaser'] = '{title_legend},name,headline,type;{config_legend},faq_categories,faq_questions,jumpTo,faq_readerModule;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID';
-
+// Make changing faq_categories submit, so the faq_questions get generated correctly
 $GLOBALS['TL_DCA']['tl_module']['fields']['faq_categories']['eval']['submitOnChange'] = true;
+
+// Add palettes to tl_module
+$GLOBALS['TL_DCA']['tl_module']['palettes']['faqteaser'] = str_replace('faq_readerModule;', 'faq_questions,jumpTo,faq_readerModule;', $GLOBALS['TL_DCA']['tl_module']['palettes']['faqlist']);
+$GLOBALS['TL_DCA']['tl_module']['palettes']['faqselection'] = str_replace('faq_categories;', 'faq_categories,faq_questions,jumpTo;', $GLOBALS['TL_DCA']['tl_module']['palettes']['faqpage']);
 
 // Add fields to tl_module
 $GLOBALS['TL_DCA']['tl_module']['fields']['faq_questions'] = [
